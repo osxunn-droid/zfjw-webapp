@@ -1,0 +1,103 @@
+/* css/pages/login.css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.login-subtitle {
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 30px;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #007aff;
+}
+#login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-button:hover {
+    background-color: #0056b3;
+}
+#login-button:disabled {
+    background-color: #a0c7ff;
+    cursor: not-allowed;
+}
+.error-message {
+    color: #ff3b30;
+    font-size: 14px;
+    margin-top: 15px;
+    min-height: 20px;
+}
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s ease-in-out infinite;
+}
+.captcha-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.captcha-wrapper input {
+    flex-grow: 1;
+    width: auto;
+}
+#captcha-image {
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}

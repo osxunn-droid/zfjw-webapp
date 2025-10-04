@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正方教务系统</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <div class="user-card" id="user-card" style="display: none;">
+            <div class="user-avatar">
+                <span class="avatar-text" id="user-avatar-text">学</span>
+            </div>
+            <div class="user-info">
+                <span class="user-name" id="user-name"></span>
+                <span class="user-id" id="user-id"></span>
+                <span class="user-college" id="user-college"></span>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h3 class="section-title">快捷功能</h3>
+            <div class="actions-grid">
+                <a class="action-item" href="pages/grade.html">
+                    <div class="action-icon">📊</div>
+                    <span class="action-text">成绩查询</span>
+                </a>
+                <a class="action-item" href="pages/exam.html">
+                    <div class="action-icon">📝</div>
+                    <span class="action-text">考试安排</span>
+                </a>
+                <a class="action-item" href="pages/schedule.html">
+                    <div class="action-icon">📚</div>
+                    <span class="action-text">课程表</span>
+                </a>
+                <a class="action-item" href="pages/course.html">
+                    <div class="action-icon">✍️</div>
+                    <span class="action-text">选课管理</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="recent-notifications" id="recent-notifications" style="display: none;">
+            <div class="notification-header">
+                <h3 class="section-title">最新通知</h3>
+                <a href="pages/notification.html" style="font-size: 14px; color: #888;">查看全部</a>
+            </div>
+            <div class="notification-list" id="notification-list">
+                </div>
+        </div>
+
+        <div class="login-prompt" id="login-prompt">
+            <h3 class="prompt-title">请先登录</h3>
+            <p class="prompt-text">登录后可查看课表、成绩等信息</p>
+            <a href="pages/login.html" class="login-button">去登录</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成绩查询 - 正方教务系统</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/query.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="../index.html" class="back-button">‹ 返回</a>
+            <h1 class="page-title">成绩查询</h1>
+        </div>
+
+        <div class="query-controls">
+            <select id="year-select"></select>
+            <select id="term-select">
+                <option value="0">全学年</option>
+                <option value="1">第一学期</option>
+                <option value="2">第二学期</option>
+            </select>
+            <button id="query-button">查询</button>
+        </div>
+
+        <div id="loading-indicator" class="page-loader"></div>
+        <p id="result-message" class="result-message"></p>
+        
+        <div id="empty-state" class="empty-state" style="display: none;">
+            <div class="empty-state-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V6h5.17l2 2H20v10z"/></svg></div>
+            <p id="empty-state-text" class="empty-state-text">该学期暂无成绩数据。</p>
+        </div>
+
+        <div class="grade-table-container">
+            <table id="grade-table">
+                <thead>
+                    <tr>
+                        <th>课程名称</th>
+                        <th>成绩</th>
+                        <th>学分</th>
+                        <th>绩点</th>
+                        <th>课程性质</th>
+                    </tr>
+                </thead>
+                <tbody id="grade-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/grade.js"></script>
+</body>
+</html>

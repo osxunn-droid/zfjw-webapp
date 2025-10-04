@@ -1,0 +1,91 @@
+/* css/pages/query.css */
+
+/* 成绩表格 */
+.grade-table-container {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+#grade-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+#grade-table th, #grade-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+#grade-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    font-size: 14px;
+}
+#grade-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* 考试卡片 */
+#exam-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.exam-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #007aff;
+}
+.exam-card-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.exam-card-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+.exam-info-item {
+    display: flex;
+    flex-direction: column;
+}
+.exam-info-item strong {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+/* 通知列表页 */
+#notification-full-list .notification-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+#notification-full-list .notification-summary {
+    -webkit-line-clamp: 3;
+}
+#notification-detail-view {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+}
+#detail-title {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#detail-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    white-space: pre-wrap;
+}

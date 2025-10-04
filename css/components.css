@@ -1,0 +1,142 @@
+/* css/components.css */
+
+/* 用户卡片 (首页) */
+.user-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007aff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+.user-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+.user-id {
+    font-size: 14px;
+    color: #888;
+}
+.user-college {
+    font-size: 13px;
+    color: #999;
+    margin-top: 4px;
+}
+
+/* 统一导航栏 */
+.main-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #888;
+    font-size: 12px;
+}
+.nav-item .nav-icon {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 2px;
+}
+.nav-item .nav-icon svg {
+    width: 100%;
+    height: 100%;
+}
+.nav-item .nav-icon path {
+    fill: #888888;
+    transition: fill 0.2s;
+}
+.nav-item.active .nav-text {
+    color: #007aff;
+}
+.nav-item.active .nav-icon path {
+    fill: #007aff;
+}
+
+/* 通用加载动画 */
+.page-loader {
+    display: none;
+    margin: 60px auto;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007aff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* 通用空状态 */
+.empty-state {
+    text-align: center;
+    padding: 80px 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.empty-state-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+}
+.empty-state-icon svg {
+    width: 100%;
+    height: 100%;
+}
+.empty-state-icon path {
+    fill: #cccccc;
+}
+.empty-state-text {
+    font-size: 16px;
+    color: #999;
+}
+
+/* 通用结果信息 */
+.result-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #888;
+}
+
+/* SweetAlert2 自定义样式 */
+.swal-course-details {
+    text-align: left;
+    padding: 10px;
+    line-height: 2;
+}
+.swal-course-details div {
+    margin-bottom: 5px;
+}

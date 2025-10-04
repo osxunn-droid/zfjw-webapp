@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的名片 - 正方教务系统</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="profile.html" class="back-button">‹ 返回</a>
+            <h1 class="page-title">我的名片</h1>
+        </div>
+        
+        <div id="loading-indicator" class="page-loader"></div>
+
+        <div class="business-card" id="business-card" style="display: none;">
+            <div class="card-header">
+                <img id="card-avatar" src="" alt="avatar" class="card-avatar">
+            </div>
+            <div class="card-body">
+                <div class="card-details-grid">
+                    <div class="info-item">
+                        <span class="info-label">姓名</span>
+                        <span id="card-name" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">性别</span>
+                        <span id="card-gender" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">学号</span>
+                        <span id="card-sid" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">学院</span>
+                        <span id="card-college" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">专业</span>
+                        <span id="card-major" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">邮箱</span>
+                        <span id="card-email" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p id="card-yiyan" class="yiyan-text">...</p>
+                <p id="yiyan-author" class="yiyan-author"></p>
+            </div>
+        </div>
+
+        <button id="save-card-button" class="save-button" style="display: none;">一键保存名片</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/profile-detail.js"></script>
+</body>
+</html>
